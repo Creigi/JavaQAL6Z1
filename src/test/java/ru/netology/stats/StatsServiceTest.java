@@ -2,7 +2,7 @@ package ru.netology.stats;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-//import org.junit.jupiter.params.provider.CsvSource;
+
 
 
 public class StatsServiceTest {
@@ -24,6 +24,7 @@ public class StatsServiceTest {
         double averageActual = service.average(sales);
         Assertions.assertEquals(averageExpected, averageActual);
     }
+
     @Test
     public void testMaxMoth() {
         double[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -32,6 +33,7 @@ public class StatsServiceTest {
         int maxMonthActual = service.monthOfHighSales(sales);
         Assertions.assertEquals(monthMaxSalesExpected, maxMonthActual);
     }
+
     @Test
     public void testMinMonth() {
         double[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -40,6 +42,7 @@ public class StatsServiceTest {
         int minMonthActual = service.monthOfMinSales(sales);
         Assertions.assertEquals(monthMinSalesExpected, minMonthActual);
     }
+
     @Test
     public void testCountMonthUnderLimit() {
         double[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -48,6 +51,7 @@ public class StatsServiceTest {
         int countMonthActual = service.amountMonthUnderAverage(sales);
         Assertions.assertEquals(countMonthExpected, countMonthActual);
     }
+
     @Test
     public void testCountMonthUpperLimit() {
         double[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
